@@ -1,0 +1,10 @@
+CREATE DATABASE Chinook WITH
+   TEMPLATE template0
+   ENCODING 'latin1'
+   TABLESPACE  pg_default
+   LC_COLLATE  'en_US.iso88591'
+   LC_CTYPE  'en_US.iso88591'
+   CONNECTION LIMIT  -1;
+
+CREATE USER chinook WITH ENCRYPTED PASSWORD 'chinook';
+GRANT ALL PRIVILEGES ON DATABASE Chinook TO chinook;
