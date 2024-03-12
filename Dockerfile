@@ -1,4 +1,4 @@
-FROM postgres:13-bullseye
+FROM postgres:16-bullseye
 
 RUN echo "en_US ISO-8859-1" >> /etc/locale.gen && \
     locale-gen
@@ -9,6 +9,7 @@ USER postgres
 
 COPY scripts/chinook_create.sql /var/lib/postgresql/
 COPY scripts/Chinook_PostgreSql.sql /var/lib/postgresql/
+COPY scripts/create_debezium_user.sql /var/lib/postgresql/
 
 RUN export LANG=en_US.iso88591 && \
     initdb --encoding=latin1 --lc-collate=en_US.iso88591 --lc-ctype=en_US.iso88591
