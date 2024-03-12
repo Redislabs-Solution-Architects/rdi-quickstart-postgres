@@ -14,7 +14,7 @@ If Debezium Server is running in a container on the same host, both containers m
 ## Connecting to the Chinook Database
 Use a standard database client, such as DBeaver:
 
-![image](https://github.com/Redislabs-Solution-Architects/rdi-quickstart-postgres/assets/116373419/5fb024eb-b5ef-4350-89f4-8682135cc456)
+![image](https://github.com/Redislabs-Solution-Architects/rdi-quickstart-postgres/assets/116373419/e6f98546-a815-41bb-8f23-43fd6955e973)
 
 - Host = `localhost`
 - Database = `chinook`
@@ -41,7 +41,7 @@ debezium.source.publication.autocreate.mode=filtered
 ```
 Sample command line for running Debezium Server as a container:
 
-```docker run -it --rm --name debezium -v $PWD/conf:/debezium/conf --network postgres debezium/server:2.5.0.Final```
+```docker run -it --rm --name debezium --network postgres -v $PWD/conf:/debezium/conf debezium/server:2.5.0.Final```
 
 ## Downloading/Pulling a Pre-built Image
 [Tbd - we can store a saved version of the image (tar file) on S3 or (better) push the image to the redislabs repo on Dockerhub]
