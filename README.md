@@ -11,6 +11,11 @@ If Debezium Server is running in a container on the same host, both containers m
 - `docker network create postgres`
 - `docker run -d --rm --name postgres --network postgres --rm -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres_rdi_ingest:v0.1`
 
+## Running with Docker Compose
+An alternative to building and running the container explicitly is to use  Docker Compose:
+- Clone the repo locally and `cd` into directory `rdi-quickstart-postgres`
+- `docker compose up -d`
+
 ## Connecting to the Chinook Database
 Use a standard database client, such as DBeaver:
 
