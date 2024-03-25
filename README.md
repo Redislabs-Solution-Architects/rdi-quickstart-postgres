@@ -14,6 +14,7 @@ If Debezium Server is running in a container on the same host, both containers m
 ## Running with Docker Compose
 An alternative to building and running the container explicitly is to use  Docker Compose:
 - Clone the repo locally and `cd` into directory `rdi-quickstart-postgres`
+- Copy file `env` to `.env`
 - `docker compose up -d`
 
 ## Connecting to the Chinook Database
