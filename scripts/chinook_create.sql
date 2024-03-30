@@ -1,7 +1,7 @@
 CREATE DATABASE Chinook WITH
    TEMPLATE template0
-   ENCODING 'latin1'
+   ENCODING 'UTF8'
    TABLESPACE  pg_default
-   LC_COLLATE  'en_US.iso88591'
-   LC_CTYPE  'en_US.iso88591'
+   LC_COLLATE  'en_US.UTF8'
+   LC_CTYPE  'en_US.UTF8'
    CONNECTION LIMIT  -1;
