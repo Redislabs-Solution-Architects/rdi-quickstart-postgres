@@ -28,7 +28,7 @@ Use a standard database client, such as DBeaver:
 - Database = `chinook`
 - Username/Password = `postgres/<postgres_password>`
 
-where `<postgres_password>` is the value of `POSTGRES_PASSWORD` in file `.env`.
+where `<postgres_password>` is the value of `POSTGRES_PASSWORD` in file `.env` (Docker Compose) or the password you specified when building the image.
 
 You should see 11 tables in the `public` schema of database `chinook`:
 
