@@ -9,7 +9,9 @@ Docker image referenced in the new RDI Quickstart Guide.
 ## Running a Container
 If Debezium Server is running in a container on the same host, both containers must use a common network:
 - `docker network create postgres`
-- `docker run -d --rm --name postgres --network postgres --rm -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres_rdi_ingest:v0.1`
+- `docker run -d --rm --name postgres --network postgres --rm -e POSTGRES_PASSWORD=<postgres_password> -p 5432:5432 postgres_rdi_ingest:v0.1`
+
+where `<postgres_password>` is a secure password of your choice.
 
 ## Running with Docker Compose
 An alternative to building and running the container explicitly is to use  Docker Compose:
@@ -24,7 +26,9 @@ Use a standard database client, such as DBeaver:
 
 - Host = `localhost`
 - Database = `chinook`
-- Username/Password = `postgres/postgres`
+- Username/Password = `postgres/<postgres_password>`
+
+where `<postgres_password>` is the value of `POSTGRES_PASSWORD` in file `.env`.
 
 You should see 11 tables in the `public` schema of database `chinook`:
 
@@ -48,6 +52,3 @@ debezium.source.publication.autocreate.mode=filtered
 Sample command line for running Debezium Server as a container:
 
 ```docker run -it --rm --name debezium --network postgres -v $PWD/conf:/debezium/conf debezium/server:2.5.0.Final```
-
-## Downloading/Pulling a Pre-built Image
-[Tbd - we can store a saved version of the image (tar file) on S3 or (better) push the image to the redislabs repo on Dockerhub]
