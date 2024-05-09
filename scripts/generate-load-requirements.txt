@@ -1,0 +1,4 @@
+python-dotenv
+pandas
+psycopg2-binary
+sqlalchemy==1.4.46

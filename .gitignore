@@ -2,3 +2,4 @@ docker.txt
 *.tar
 .env
 .DS_Store
+scripts/load
