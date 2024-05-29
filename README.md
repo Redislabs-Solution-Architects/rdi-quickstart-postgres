@@ -15,8 +15,11 @@ where `<postgres_password>` is a secure password of your choice.
 ## Running with Docker Compose
 An alternative to building and running the container explicitly is to use  Docker Compose:
 - Clone the repo locally and `cd` into directory `rdi-quickstart-postgres`
-- Copy file `env` to `.env` (change the password for user `postgres`, if required)
+- Copy file `env` to `.env`
+- add a complex password for user `postgres`
 - `docker compose up -d`
+
+> Note that PostgreSQL databases are a prime target for hackers. When deploying the container on a Cloud VM, you must ensure that only your IP is allowed in the firewall rule that opens port 5432.
 
 ## Connecting to the Chinook Database
 Use a standard database client, such as DBeaver:
