@@ -2,7 +2,6 @@
 
 set -e
 
-PGDATA=/var/lib/postgresql/data
 
 echo "wal_level = logical" >> $PGDATA/postgresql.conf
 
