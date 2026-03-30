@@ -17,7 +17,7 @@ An alternative to building and running the container explicitly is to use  Docke
 - Clone the repo locally and `cd` into directory `rdi-quickstart-postgres`
 - Copy file `env` to `.env`
 - add a complex password for user `postgres`
-- `docker compose up -d`
+- `docker-compose up -d`
 
 > Note that PostgreSQL databases are a prime target for hackers. When deploying the container on a Cloud VM, you must ensure that only your IP is allowed in the firewall rule that opens port 5432.
 
